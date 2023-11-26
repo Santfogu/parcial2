@@ -1,6 +1,7 @@
-import { AlbumEntity } from 'src/album/album.entity';
-import { Column, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { AlbumEntity } from '../album/album.entity';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
+@Entity()
 export class TrackEntity {
 
     @PrimaryGeneratedColumn('uuid')

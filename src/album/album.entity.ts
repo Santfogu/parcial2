@@ -1,7 +1,8 @@
-import { PerformerEntity } from 'src/performer/performer.entity';
-import { TrackEntity } from 'src/track/track.entity';
-import { Column, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { PerformerEntity } from '../performer/performer.entity';
+import { TrackEntity } from '../track/track.entity';
+import { Column, Entity, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 
+@Entity()
 export class AlbumEntity {
 
     @PrimaryGeneratedColumn('uuid')

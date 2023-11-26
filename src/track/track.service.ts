@@ -3,7 +3,7 @@ import { BusinessError, BusinessLogicException } from '../shared/errors/business
 import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { TrackEntity } from './track.entity';
-import { AlbumEntity } from 'src/album/album.entity';
+import { AlbumEntity } from '../album/album.entity';
 
 @Injectable()
 export class TrackService {

@@ -24,7 +24,7 @@ export class AlbumPerformerService {
         if (!album)
             throw new BusinessLogicException("The album with the given id was not found", BusinessError.NOT_FOUND);
         
-        if (album.performers.length = 3)
+        if (album.performers.length >= 3)
             throw new BusinessLogicException("Un álbum no puede tener más de tres performers asociados", BusinessError.PRECONDITION_FAILED);
         
         album.performers = [...album.performers, performer];

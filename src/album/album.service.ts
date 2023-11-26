@@ -33,7 +33,7 @@ export class AlbumService {
         const album: AlbumEntity = await this.albumRepository.findOne({where:{id}});
         if (!album)
           throw new BusinessLogicException("The album with the given id was not found", BusinessError.NOT_FOUND);
-        if (album.tracks.length > 0)
+        if (album.tracks && album.tracks.length > 0)
           throw new BusinessLogicException("Un album no puede ser eliminado si tiene tracks asociados", BusinessError.BAD_REQUEST);
       
         await this.albumRepository.remove(album);

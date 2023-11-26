@@ -6,6 +6,9 @@ import { TrackModule } from './track/track.module';
 import { PerformerModule } from './performer/performer.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AlbumPerformerModule } from './album-performer/album-performer.module';
+import { AlbumEntity } from './album/album.entity';
+import { TrackEntity } from './track/track.entity';
+import { PerformerEntity } from './performer/performer.entity';
 
 @Module({
   imports: [AlbumModule, TrackModule, PerformerModule,
@@ -16,7 +19,7 @@ import { AlbumPerformerModule } from './album-performer/album-performer.module';
       username: 'postgres',
       password: 'postgres',
       database: 'parcial2',
-      entities: [AlbumModule, TrackModule, PerformerModule],
+      entities: [AlbumEntity, TrackEntity, PerformerEntity],
       dropSchema: true,
       synchronize: true,
       keepConnectionAlive: true
